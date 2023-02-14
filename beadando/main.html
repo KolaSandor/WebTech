@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="author" content="Kola Sandor">
+    <link rel="stylesheet" href="main_style.css">
+    <meta charset="UTF-8">
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kola Sándor-B8GU52</title>
+
+</head>
+
+<body>
+
+    <div id="all">
+
+        <div style="background-color: #af0000; height: 40px;">
+            <p style="margin: 0; padding:0.5%; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white;">Order online now and pay no delivery fee!</p>
+        </div>
+
+        <div class="container">
+            <div class="navbar">
+                <ul class="menu">
+                    <img src="favicon.jpg" style="width: 3%; border-radius: 0 15px 0 0; margin-left: 2%; margin-right: 36%; box-shadow: 0 2px 20px 0;">
+                    <li><a href="#about" id="go1" onclick="go('go1')">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#contact" id="go2" onclick="go('go2')">Contact</a></li>
+                    <button id="order" onclick="location.href='order.html'">Order online</button>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin: 0%; padding: 0%;">
+            <img src="gyros_hatter2.png" width="100%">
+        </div>
+
+        <div id="items">
+            <table style="width:80%">
+                <tr>
+                    <td><img src="pita_pictogram.png"  class="pics""></td>
+                    <td><img src="plate_pictogram.png"  class="pics"></td>
+                    <td><img src="vegan_pictogram.png"  class="pics" style="margin-left: 32%;"></td>
+                </tr>
+                <tr>
+                    <td class="texts">Pitas</td>
+                    <td class="texts">Plates</td>
+                    <td class="texts">Vegan options</td>
+                </tr>
+                <tr>
+                    <td><button onclick="location.href='order.html'">Order now</button></td>
+                    <td><button onclick="location.href='order.html'">Order now</button></td>
+                    <td><button onclick="location.href='order.html'">Order now</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="about" style="margin-bottom: 5%;">
+            <img class="bg" src="about.jpg" width="100%">
+            <div class="content" id="blur">
+                <h2 style="margin-top: 5%; font-size: 45px; margin-bottom: 2%; text-shadow: 5px 5px 8px black;">Fresh.</br>Authentic.</br>Simple.</h2>
+                <p style="margin-right: 55%; font-size: 25pt; text-shadow: 3px 3px 5px black;">Grilling a vertical spit of stacked meat slices and cutting it off as it cooks was developed in Bursa by Turks in the 19th century Ottoman Empire, and called doner kebab.
+
+                    Following World War II, doner kebab made with lamb was present in Athens, introduced by immigrants from Anatolia and the Middle East. A distinct Greek variation developed, often made with pork and served with tzatziki sauce, which later became known as gyros.
+                    
+                    The gyro was first introduced to the American public by George Apostolou in 1965 at the Parkview Restaurant, Chicago, IL, which was owned by Apostolou and his cousin.</p>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h2 style="font-weight: 400; margin-top: 6%;">Follow</h2>
+            <h1 style="font-weight: bold; color: #af0000; margin-bottom: 1%; margin-top: 1%;">@randomfactsaboutgyros</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div class="containers">
+                            <img src="tal.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Gyros plate</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="containers">
+                            <img src="pita.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Pita</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="containers">
+                            <img src="tortilla.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Tortilla</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="containers">
+                            <img src="kifli.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Crescent</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+<footer>
+
+    <table style="margin-top: 3%;">
+        <tr>
+            <td class="tops">Contact Us</td>
+            <td class="tops">Address</td>
+            <td class="tops">Opening Hours</td>
+        </tr>
+        <tr>
+            <td>125-568-2577</td>
+            <td>2023 Miskolc street</td>
+            <td>Mon-Fri: 10am-10pm</td>
+        </tr>
+        <tr>
+            <td>gyros@randomfactsaboutgyros.com</td>
+            <td>Budapest, BP 25617</td>
+            <td>Saturday: 10am-1am</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="padding-bottom: 20px;">Sunday: 11am-6pm</td>
+        </tr>
+    </table>
+
+    <div id="end">
+        <p style="margin-top: 1%; margin-left: 3%; padding-bottom: 2%;">©2023 by KS</p>
+        <img src="up.png" style="width: 4%; margin-left: 85%; margin-bottom: 1%; cursor: pointer;" id="goTop" onclick="gototop()">
+    </div>
+
+</footer>

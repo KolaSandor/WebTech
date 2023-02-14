@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="author" content="Kola Sandor">
+    <link rel="stylesheet" href="order.css">
+    <meta charset="UTF-8">
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kola Sándor-B8GU52</title>
+
+</head>
+
+<body>
+
+    <div id="gyrosModal" class="modal">
+        <div class="modal-content">
+
+            <div class="full_content">
+
+                <div class="pic">
+                    <span class="close cursor" onclick="closeModal('gyrosModal')">&times;</span>
+                    <img src="tal.jpg" style="width:100%" id="food_img">
+                </div>
+
+                <p class="food_name" id="food"></p>
+                <p class="requests_t">Special request</p>
+                <textarea style="resize: none;" rows="3" cols="40" class="requests" placeholder="Whatever you would like."></textarea>
+                <hr>
+                <div class="button_div">
+                    <button class="add" onclick="addToCart()">Add to cart</button>
+                    <div class="quantity">
+                        <span style="border: solid grey 1px; padding: 10px">
+                            <button id="dec" class="decrease" disabled onclick="decreaseValue()">-</button>
+                            <input id="increment" aria-label="Quantity" aria-live="assertive" disabled type="number" min="1" step="1" value="1">
+                            <button class="increase" onclick="incrementValue()">+</button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div style="background-color: #af0000; height: 40px;">
+        <p style="margin: 0; padding:0.5%; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white;">Order online now and pay no delivery fee!</p>
+    </div>
+
+    <div class="container">
+        <div class="navbar">
+            <ul class="menu">
+                <img src="favicon.jpg" style="width: 3%; border-radius: 0 15px 0 0; margin-left: 2%; margin-right: 36%; box-shadow: 0 2px 20px 0;">
+                <li><a href="main.html#about">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#contact" id="go2" onclick="go('go2')">Contact</a></li>
+                <button id="order" onclick="location.href='order.html'">Order online</button>
+            </ul>
+        </div>
+    </div>
+
+    <div class="all">
+
+        <hr>
+
+        <div class="container">
+            <div class="navbar">
+                <ul class="menu2" style="margin-left: 3%;">
+                    <li><a href="#gyros" id="goes" onclick="go('goes')">Gyros plate</a></li>
+                    <li><a href="#gyros_p" id="goes2" onclick="go('goes2')">Gyros pita</a></li>
+                    <li><a href="#gyros_t" id="goes3" onclick="go('goes3')">Gyros tortilla</a></li>
+                    <li><a href="#gyros_k" id="goes4" onclick="go('goes4')">Gyros crescent</a></li>
+                    <div id="order_cart" onclick="location.href='checkout.html'">
+                        <li>&#128722
+                            <input id="cart" disabled type="number" min="1" step="1" value="0">
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="frame" style="background-image: url('gyros.jpg')" id="gyros"></div>
+        <h3>Gyros plates</h3>
+
+        <div class="grid_container">
+
+            <div class="items" onclick="openModal('Chicken gyros', 'tal.jpg')">
+                <div class="meal">Chicken gyros plate</div>
+                <div class="money" style="margin-top: 5%; margin-left: -27.5%;">$13.00</div>
+                <img src="tal.jpg" style="margin-left: 62.9%;">
+            </div>
+
+            <div class="items" onclick="openModal('Pork gyros', 'tal.jpg')">
+                <div class="meal">Pork gyros plate</div>
+                <div class="money" style="margin-top: 5%;">$13.00</div>
+                <img src="tal.jpg" style="margin-left: 63.1%;">
+            </div>
+
+            <div class="items" onclick="openModal('Lamb gyros', 'tal.jpg')">
+                <div class="meal">Lamb gyros plate</div>
+                <div class="money" style="margin-top: 5%; margin-left: -24%;">$13.00</div>
+                <img src="tal.jpg" style="margin-left: 62.6%;">
+            </div>
+
+            <div class="items" onclick="openModal('Vegan gyros', 'tal.jpg')">
+                <div class="meal">Vegan gyros plate</div>
+                <div class="money" style="margin-top: 5%; margin-left: -25%;">$13.00</div>
+                <img src="tal.jpg" style="margin-left: 62.7%;">
+            </div>
+
+        </div>
+
+        <div class="frame" style="background-image: url('gyros_p.jpg')" id="gyros_p"></div>
+        <h3>Gyros pita</h3>
+
+        <div class="grid_container">
+
+            <div class="items" onclick="openModal('Chiken gyros pita', 'pita.jpg')">
+                <div class="meal" style="margin-left: 3%;">Chicken gyros pita</div>
+                <div class="money" style="margin-top: 5%; margin-left: -26.5%;">$13.00</div>
+                <img src="pita.jpg" style="margin-left: 63.5%;">
+            </div>
+
+            <div class="items" onclick="openModal('Pork gyros pita', 'pita.jpg')">
+                <div class="meal" style="margin-left: 3%;">Pork gyros pita</div>
+                <div class="money" style="margin-top: 5%; margin-left: -22.2%;"" >$13.00</div>
+                <img src="pita.jpg" style="margin-left: 63.85%;">
+            </div>
+
+            <div class="items" onclick="openModal('Lamb gyros pita', 'pita.jpg')">
+                <div class="meal" style="margin-left: 3%;">Lamb gyros pita</div>
+                <div class="money" style="margin-top: 5%; margin-left: -23.5%;">$13.00</div>
+                <img src="pita.jpg" style="margin-left: 63.7%;">
+            </div>
+
+            <div class="items" onclick="openModal('Vegan gyros pita', 'pita.jpg')">
+                <div class="meal" style="margin-left: 3%;">Vegan gyros pita</div>
+                <div class="money" style="margin-top: 5%; margin-left: -24.5%;">$13.00</div>
+                <img src="pita.jpg" style="margin-left: 63.8%;">
+            </div>
+
+        </div>
+
+        <div class="frame" style="background-image: url('gyros_t.jpg')" id="gyros_t"></div>
+        <h3>Gyros tortilla</h3>
+
+        <div class="grid_container">
+
+            <div class="items" onclick="openModal('Chiken gyros tortilla', 'tortilla.jpg')">
+                <div class="meal" style="margin-left: 3%;">Chicken gyros tortilla</div>
+                <div class="money" style="margin-top: 5%; margin-left: -30%;">$13.00</div>
+                <img src="tortilla.jpg" style="margin-left: 63.5%;">
+            </div>
+
+            <div class="items" onclick="openModal('Pork gyros tortilla', 'tortilla.jpg')">
+                <div class="meal" style="margin-left: 3%;">Pork gyros tortilla</div>
+                <div class="money" style="margin-top: 5%; margin-left: -25.2%;"" >$13.00</div>
+                <img src="tortilla.jpg" style="margin-left: 63.35%;">
+            </div>
+
+            <div class="items" onclick="openModal('Lamb gyros tortilla', 'tortilla.jpg')">
+                <div class="meal" style="margin-left: 3%;">Lamb gyros tortilla</div>
+                <div class="money" style="margin-top: 5%; margin-left: -27%;">$13.00</div>
+                <img src="tortilla.jpg" style="margin-left: 63.7%;">
+            </div>
+
+            <div class="items" onclick="openModal('Vegan gyros tortilla', 'tortilla.jpg')">
+                <div class="meal" style="margin-left: 3%;">Vegan gyros tortilla</div>
+                <div class="money" style="margin-top: 5%; margin-left: -27.5%;">$13.00</div>
+                <img src="tortilla.jpg" style="margin-left: 63.3%;">
+            </div>
+
+        </div>
+
+        <div class="frame" style="background-image: url('gyros_k.jpg')" id="gyros_k"></div>
+        <h3>Gyros crescent</h3>
+
+        <div class="grid_container">
+
+            <div class="items" onclick="openModal('Chiken gyros crescent', 'kifli.jpg')">
+                <div class="meal" style="margin-left: 3%;">Chicken gyros crescent</div>
+                <div class="money" style="margin-top: 5%; margin-left: -32.5%;">$13.00</div>
+                <img src="kifli.jpg" style="margin-left: 63.6%;">
+            </div>
+
+            <div class="items" onclick="openModal('Pork gyros crescent', 'kifli.jpg')">
+                <div class="meal" style="margin-left: 3%;">Pork gyros crescent</div>
+                <div class="money" style="margin-top: 5%; margin-left: -27.5%;">$13.00</div>
+                <img src="kifli.jpg" style="margin-left: 63.25%;">
+            </div>
+
+            <div class="items" onclick="openModal('Lamb gyros crescent', 'kifli.jpg')">
+                <div class="meal" style="margin-left: 3%;">Lamb gyros crescent</div>
+                <div class="money" style="margin-top: 5%; margin-left: -29%;">$13.00</div>
+                <img src="kifli.jpg" style="margin-left: 63.35%;">
+            </div>
+
+            <div class="items" onclick="openModal('Vegan gyros crescent', 'kifli.jpg')">
+                <div class="meal" style="margin-left: 3%;">Vegan gyros crescent</div>
+                <div class="money" style="margin-top: 5%; margin-left: -30%;">$13.00</div>
+                <img src="kifli.jpg" style="margin-left: 63.3%;">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="order.js"></script>
+
+</body>
+
+<footer id="contact">
+
+    <table style="margin-top: 3%;">
+        <tr>
+            <td class="tops">Contact Us</td>
+            <td class="tops">Address</td>
+            <td class="tops">Opening Hours</td>
+        </tr>
+        <tr>
+            <td>125-568-2577</td>
+            <td>2023 Miskolc street</td>
+            <td>Mon-Fri: 10am-10pm</td>
+        </tr>
+        <tr>
+            <td>gyros@randomfactsaboutgyros.com</td>
+            <td>Budapest, BP 25617</td>
+            <td>Saturday: 10am-1am</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="padding-bottom: 20px;">Sunday: 11am-6pm</td>
+        </tr>
+    </table>
+
+    <div id="end">
+        <p style="margin-top: 1%; margin-left: 3%; padding-bottom: 2%;">©2023 by KS</p>
+        <img src="up.png" style="width: 4%; margin-left: 85%; margin-bottom: 1%; cursor: pointer;" id="goTop" onclick="gototop()">
+    </div>
+
+</footer>
